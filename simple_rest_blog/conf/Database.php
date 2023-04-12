@@ -10,7 +10,7 @@ class Database{
 
     public function connect(){
         $this->con=null;
-
+        
         try{
             $this->con=new PDO('mysql:host='.$this->host.';dbname='.$this->db_name,$this->user,$this->password);
             $this->con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
